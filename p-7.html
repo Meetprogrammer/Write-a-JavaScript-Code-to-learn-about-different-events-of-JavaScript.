@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Events</title>
+	
+</head>
+<body>
+	<h2>JavaScript Events</h2>
+	<button id="myButton">Click Me</button>
+	<br><br>
+	<div id="myDiv" style="width:100px; height:100px; background-color:lightgray;">Hover Over Me</div>
+	<br><br>
+	<select id="mySelect">
+		<option value="">Select</option>
+		<option value="Option 1">Option 1</option>
+		<option value="Option 2">Option 2</option>
+		<option value="Option 3">Option 3</option>
+	</select>
+    <script>
+		//Event: onload
+		window.onload = function(){
+			alert("Page Loaded");
+		}
+		//Event: onclick
+		document.getElementById("myButton").onclick = function(){
+			alert("Button Clicked");
+		}
+		//Event: onmouseover
+		document.getElementById("myDiv").onmouseover = function(){
+			document.getElementById("myDiv").style.backgroundColor = "lightblue";
+		}
+		//Event: onmouseout
+		document.getElementById("myDiv").onmouseout = function(){
+			document.getElementById("myDiv").style.backgroundColor = "";
+		}
+		//Event: onchange
+		document.getElementById("mySelect").onchange = function(){
+			var selectedValue = document.getElementById("mySelect").value;
+			alert("Selected Value: " + selectedValue);
+		}
+	</script>
+</body>
+</html>
